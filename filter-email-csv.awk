@@ -22,7 +22,7 @@ $1 ~ /:$/ ||
 	# filter out all websites (words starting with http(s)://
 	# and emails (words like abc@xyz.com)
 	gsub(/(https?:\/\/\S+)|(\S+@\S+\.\S+)/, "")
-	# filter out extra whitespace
+	# filter out punctuation
 	gsub(/[[:punct:]]/, " ")
 	# Filter out all whitespace
     	gsub (/\s+/, " ")
