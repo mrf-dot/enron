@@ -1,10 +1,9 @@
 # Print column headers
 BEGIN { printf "%-10s %-10s %-10s\n", "Rank:", "Word:", "Frequency:"
-	limit = ARGC == 3 ? ARGV[2] : 10
 }
 
 # Exit if the number of rows is greater than 10
-NR > limit { exit 0 }
+NR > 10 { exit 0 }
 
 # Print the formatted entry
 { printf "%-10s %-10s %-10s\n", addcomma(NR), $2, addcomma($1) }

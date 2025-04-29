@@ -26,6 +26,13 @@ $1 ~ /:$/ ||
 	gsub(/[[:punct:]]/, " ")
 	# Filter out all whitespace
     	gsub (/\s+/, " ")
-    # print teh line if it is not just whitespace
+	# print the line if it is not just whitespace
     	if ($0 !~ /^\s*$/) print
+	# Show line progress on standard err
+	if (NR % 2222 == 0)
+		printf "\rProcessing line: %d", NR > "/dev/stderr"
+}
+
+END {
+	printf "\rProcessing line: %d\n", NR > "/dev/stderr"
 }

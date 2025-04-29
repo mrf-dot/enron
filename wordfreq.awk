@@ -7,6 +7,10 @@
 		# Add lowercase word to the array with its frequency
 		freq[tolower($i)]++
 	}
+
+	# Show line progress on standard err
+	if (NR % 2222 == 0)
+		printf "\rProcessing line: %d", NR > "/dev/stderr"
 }
 
 END {
@@ -22,4 +26,5 @@ END {
 		if (word !~ banned)
 			# print frequency of word and word for each word
 			print freq[word], word
+	printf "\rProcessing line: %d\n", NR > "/dev/stderr"
 }

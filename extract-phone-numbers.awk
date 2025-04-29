@@ -18,6 +18,10 @@
 		# after the number
 		line = substr(line, RSTART + RLENGTH)
 	}
+
+	# Show line progress on standard err
+	if (NR % 2222 == 0)
+		printf "\rProcessing line: %d", NR > "/dev/stderr"
 }
 
 END {
@@ -25,4 +29,5 @@ END {
 	for (number in numbers) {
 		print numbers[number], number
 	}
+	printf "\rProcessing line: %d\n", NR > "/dev/stderr"
 }
