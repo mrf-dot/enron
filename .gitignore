@@ -1,2 +1,4 @@
-# ignore the generated helper files from the program output
+# Ignore the generated helper files from the program output
 *.txt
+# Ignore the 1GB+ CSV file with all the emails
+*.csv
