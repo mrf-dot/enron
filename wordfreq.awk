@@ -25,6 +25,6 @@ END {
 		# Ensure that word is not in the banned list
 		if (word !~ banned)
 			# print frequency of word and word for each word
-			print freq[word], word
+			print freq[word], word | "sort -nr"
 	printf "\rProcessing line: %d\n", NR > "/dev/stderr"
 }

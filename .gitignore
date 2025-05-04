@@ -1,4 +1,5 @@
 # Ignore the generated helper files from the program output
 *.txt
+!areacode-locations.txt
 # Ignore the 1GB+ CSV file with all the emails
 *.csv

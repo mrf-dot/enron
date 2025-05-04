@@ -13,6 +13,6 @@
 
 END {
 	for (areacode in areacodes) {
-		print areacodes[areacode], areacode
+		print areacodes[areacode], areacode | "sort -nr"
 	}
 }

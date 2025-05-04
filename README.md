@@ -18,7 +18,7 @@ cd enron
 Then, use the `curl` command to obtain a copy of the corpus from Kaggle's website.
 
 ```sh
-curl -L -o emails.csv.zip https://www.kaggle.com/api/v1/datasets/download/wcukierski/enron-email-dataset
+curl -Lo emails.csv.zip 'https://www.kaggle.com/api/v1/datasets/download/wcukierski/enron-email-dataset'
 ```
 
 Finally, unzip the file into the directory.

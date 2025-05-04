@@ -27,7 +27,7 @@
 END {
 	# print number with number of occurences
 	for (number in numbers) {
-		print numbers[number], number
+		print numbers[number], number | "sort -nr"
 	}
 	printf "\rProcessing line: %d\n", NR > "/dev/stderr"
 }
